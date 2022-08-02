@@ -120,5 +120,24 @@ border: 1px solid;
     color: var(--corErro);
 }
     
+ @media (max-width: 750px) {
 
+    Body {
+        background-size:contain;
+        height: 100vh;
+    }
+    
 
+    .background {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .background .conteudo {
+        padding: 10px 10px;
+        margin: 20px auto;
+    }
+
+}

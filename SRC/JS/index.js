@@ -1,13 +1,9 @@
 const todoItem = document.querySelectorAll('.inputcommsgerro')
 const botaoEnviar = document.querySelector('.botao')
 
-console.log(todoItem)
-
-
 const preenchimento = document.querySelectorAll('.box')
 const msgErroIndividual = document.querySelectorAll('.msgerro')
 
-console.log(msgErroIndividual)
     for(let i=0; i < preenchimento.length; i++){
         preenchimento[i].addEventListener("change", () =>{
             if( preenchimento[i].value != ""){
