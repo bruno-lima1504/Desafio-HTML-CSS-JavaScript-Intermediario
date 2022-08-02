@@ -1,15 +1,23 @@
+:root{
+    --corErro: #f52E2E;
+    --corValido: #00C22B;
+    --corConteudo: #ffffff
+
+}
+
 body {
     font-family: 'Roboto',sans-serif;
     display: flex;   
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height:100vh;
+    background-image: url(../imagens/bg-repeat.jpg);
+    background-size: contain;
 }
 
 .background {    
-    width: 800px;
-    height: 402px;
-    background-image: url(../imagens/bg-repeat.jpg);
+    width: 760px;
+    height: 402px;    
     background-repeat: repeat;
     display: flex;
     align-items: center;
@@ -26,11 +34,13 @@ body {
     font-size: 1rem;
     text-align: left;
     margin-bottom: 11px;
+    color: var(--corConteudo);
 }
 
 .background .conteudo p {
     font-weight: 400;
     font-size: 1rem;
+    color: var(--corConteudo);
 }
 
 .background .formulario {
@@ -74,7 +84,8 @@ body {
 
 .background .formulario p {
     font-weight: 400;
-    font-size: 1rem;         
+    font-size: 1rem;
+    color: #000;         
 }
 
 .background .formulario .botao {
@@ -96,17 +107,17 @@ border: 1px solid;
 
 
 .background .formulario .inputcommsgerro .box.valido {
-    border-color: #00C22B;
+    border-color: var(--corValido);
 }
 
 .background .formulario .inputcommsgerro .box.invalido {
-    border-color: #f52E2E;
-    color: #f52E2E;
+    border-color: var(--corErro);
+    color: var(--corErro);
 }
 
 .background .formulario .inputcommsgerro .msgerro.invalido {
     opacity: 1;
-    color: #f52E2E;
+    color: var(--corErro);
 }
     
 

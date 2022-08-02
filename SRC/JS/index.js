@@ -1,24 +1,43 @@
 const todoItem = document.querySelectorAll('.inputcommsgerro')
 const botaoEnviar = document.querySelector('.botao')
 
-botaoEnviar.addEventListener('click', 
-        function (event){
-        event.preventDefault()
-})
+console.log(todoItem)
 
-function enviarDados() {
-    for (const items of todoItem) {
+
+const preenchimento = document.querySelectorAll('.box')
+const msgErroIndividual = document.querySelectorAll('.msgerro')
+
+console.log(msgErroIndividual)
+    for(let i=0; i < preenchimento.length; i++){
+        preenchimento[i].addEventListener("change", () =>{
+            if( preenchimento[i].value != ""){
+
+                preenchimento[i].classList.add('valido');
+                preenchimento[i].classList.remove('invalido');  
+                msgErroIndividual[i].classList.add('valido');
+                msgErroIndividual[i].classList.remove('invalido');
+            }else{
+                preenchimento[i].classList.add('invalido');
+                preenchimento[i].classList.remove('valido');msgErroIndividual[i].classList.add('invalido');msgErroIndividual[i].classList.remove('valido');
+            }
+        }
+        )
+    }
+
+function enviarDados() {    
+    for (const items of todoItem)
+     {        
         const box = items.querySelector('.box')
-        const textoerro = items.querySelector('.msgerro')
+        const textoErro = items.querySelector('.msgerro')
        
         if (box.value === "") {
             box.classList.add('invalido')
             box.classList.remove('valido')
-            textoerro.classList.add('invalido')
+            textoErro.classList.add('invalido')
         } else {
             box.classList.remove('invalido')
             box.classList.add('valido')
-            textoerro.classList.remove('invalido')
+            textoErro.classList.remove('invalido')
         }
-    }
+    }     
 }
